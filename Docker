@@ -1,0 +1,6 @@
+FROM python:3-slim
+WORKDIR /new
+ADD . /new
+RUN pip install --trusted-host pypi.python.org Flask
+RUN pip install --trusted-host pypi.python.org requests
+CMD ["python3", "new.py"]
